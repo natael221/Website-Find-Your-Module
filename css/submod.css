@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+body {
+    font-family: Arial, sans-serif;
+}
+
+.dashboard {
+    /* background-color:#B9E3E5; */
+    margin-top: 4%;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.dashboard h1{
+    font-family:'Montserrat';
+    font-weight: bold;
+    color: #7ED2D7;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Mengatur modul rata kiri dan kanan */
+    width: 100%; /* Pastikan setiap row mengisi lebar penuh */
+}
+
+.module {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    flex: 1;
+    max-width: calc(25% - 40px);
+    box-sizing: border-box;
+    width: 25%;
+}
+
+.module:hover {
+    transform: scale(1.05);
+}
+
+.module img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.module h3 {
+    margin-top: 10px;
+}

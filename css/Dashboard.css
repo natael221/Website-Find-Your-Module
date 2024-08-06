@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+.content {
+	flex: 1;
+    text-align: center;
+    padding: 20px; 
+    margin-top: 70px;
+}
+
+.gambar {
+    display: block;
+	height: 400px;
+	width: 400px;
+	margin-left: 90px;
+	margin-top: 27%;
+}
+
+.coba {
+	text-align: left;
+	margin-top: 40%;
+	margin-left: 20%;
+}
+
+.coba p{
+	font-family: 'Montserrat';
+	font-size: 16px;
+}
+
+.button {
+	cursor:pointer;
+	margin-top: 44%;
+    margin-bottom: 0%;
+	border-radius: 20px;
+	border: 0px solid #000000;
+	background-color: #7ED2D7;
+	transition: background-color 0.3s ease;
+	color: #000000;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.button:active{
+	transform: translateY(3px);
+	
+}

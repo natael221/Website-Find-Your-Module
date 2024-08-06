@@ -1,0 +1,61 @@
+.containers{
+    /* display: none; */
+    position: fixed;
+    font-family: 'Montserrat', sans-serif; /* Ganti dengan font yang diinginkan */
+    font-size: 16px;
+    border-radius: 50px;;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #B9E3E5; /* Ganti dengan warna latar belakang tombol yang diinginkan */
+    /* color: white; */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 000;
+}
+
+.containers h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 0px;
+    margin-bottom: 02px;
+}
+
+.containers form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.containers label {
+    display: block;
+    margin-bottom: 0px;
+    font-size: 14px;
+    color: #494545;
+}
+
+.containers select, .containers input {
+    width: 91%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 50px;
+    border: none;
+}
+
+.btns{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 50px;
+    border: 1px solid #08668b;
+}
+
+.eyebutton{
+    border-radius: 90px;
+    op: 1px;
+    background-color: transparent;
+}

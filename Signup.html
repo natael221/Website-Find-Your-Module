@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/Login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/befce87d38.js" crossorigin="anonymous"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1527.0.min.js"></script>
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container log-in-container">
+            <form action="Verification.html">
+                    <h1 class="text">Sign Up With  a New Account</h1>
+                <div>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <div class="signup">
+                        <!-- Pesan atau tautan signup -->
+                        <p>Already Have an Account? <a href="index.html">Sign In</a></p>
+                    </div>
+                </div>
+                <button class="button">Sign Up</button>
+            </form>
+        </div>    
+    </div>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1527.0.min.js"></script>
+    <script>
+        var poolData = {
+            UserPoolId: 'us-east-1_XquZ6VZkU',
+            ClientId: '1rp2i6862fmupdbh4hjdathhcp'
+        };
+
+        var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+
+        function registerAndVerify() {
+            var attributeList = [];
+
+            var dataEmail = {
+                Name: 'email',
+                Value: document.getElementById('email').value
+            };
+
+            var attributeEmail = new AmazonCognitoIdentity.CognitoUserAttribute(dataEmail);
+
+            attributeList.push(attributeEmail);
+
+            userPool.signUp(document.getElementById('email').value, document.getElementById('password').value, attributeList, null, function (err, result) {
+                if (err) {
+                    console.error('Sign up error', err);
+                    return;
+                }
+
+                var cognitoUser = result.user;
+                console.log('user name is ' + cognitoUser.getUsername());
+
+                // Redirect to the email verification page
+                window.location.href = 'verification.html';
+            });
+        }
+    </script>
+</body>
+</html>

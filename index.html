@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/Login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/befce87d38.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container log-in-container">
+            <form action="depan.html">
+                    <h1 class="text">Login to Your Account</h1>
+                <div>
+                    <input type="email" id="email" placeholder="Email">
+                    <input type="password" id="password" placeholder="Password">
+                    <div class="signup">
+                        <!-- Pesan atau tautan signup -->
+                        <p>Need an Account? <a href="Signup.html">Sign Up</a></p>
+                    </div>
+                </div>
+                <button type="button" onclick="signIn()">Sign In</button>
+            </form>
+        </div>    
+    </div>
+    <script src="./node_modules/aws-sdk/dist/aws-sdk.min.js"></script>
+    <script>
+        // Replace 'your-user-pool-id' and 'your-client-id' with your actual values
+        var poolData = {
+            UserPoolId: '',
+            ClientId: ''
+        };
+
+        var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+
+        // Fungsi untuk masuk (sign in)
+        function signIn() {
+            var authenticationData = {
+                Username: document.getElementById('email').value,  // Gunakan 'Username' sebagai pengganti 'email'
+                Password: document.getElementById('password').value,
+            };
+
+            var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
+
+            var userData = {
+                Username: document.getElementById('email').value,
+                Pool: userPool
+            };
+
+            var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
+
+            cognitoUser.authenticateUser(authenticationDetails, {
+                onSuccess: function (session) {
+                    console.log('Authentication successful', session);
+                    // Implementasikan logika setelah sign-in berhasil
+                },
+                onFailure: function (err) {
+                    console.error('Authentication failed', err);
+                    // Implementasikan logika setelah sign-in gagal
+                },
+                newPasswordRequired: function (userAttributes, requiredAttributes) {
+                    // Implementasikan logika jika password baru diperlukan
+                }
+            });
+        }
+
+            cognitoUser.authenticateUser(authenticationDetails, {
+                onSuccess: function (session) {
+                    console.log('Authentication successful', session);
+                    // Implementasikan logika setelah sign-in berhasil
+                },
+                onFailure: function (err) {
+                    console.error('Authentication failed', err);
+                    // Implementasikan logika setelah sign-in gagal
+                },
+                newPasswordRequired: function (userAttributes, requiredAttributes) {
+                    // Implementasikan logika jika password baru diperlukan
+                }
+            });
+    </script>
+</body>
+</html>

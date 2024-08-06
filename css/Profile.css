@@ -1,0 +1,95 @@
+body {
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.profile-container {
+    font-family: 'Montserrat';
+    max-width: 1000px;
+    margin-top: 120px;
+    padding: 20px;
+    width: 800px;
+    height: 430px;
+    background-color: #B9E3E5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h1{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.profile-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    
+}
+
+.profile-label {
+    font-family: 'Montserrat';
+    width: 200px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.profile-value {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    min-height: 35px; /* Atur ukuran minimal yang diinginkan */
+}
+
+.custom-btn {
+    font-family: 'Montserrat';
+    background-color: transparent;
+    color: #000000;
+    text-decoration: none;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.custom-btn i {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+/* Style untuk efek hover */
+.custom-btn:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.profile-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoutbtn{
+    text-align: center;
+    font-family: 'Montserrat';
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    background-color: rgb(211, 39, 39);
+}
