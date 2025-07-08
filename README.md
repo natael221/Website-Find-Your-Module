@@ -24,8 +24,9 @@ I took part in this program under the **AWS Cloud Solution Architect** track.
 
 ---
 
-🌐 **Live Preview**: [https://findyourmodule.vercel.app](https://findyourmodule.vercel.app)
+## 🌐 Live Preview
 
+🔗 [findyourmodule.vercel.app](https://findyourmodule.vercel.app/)
 
 ---
 
