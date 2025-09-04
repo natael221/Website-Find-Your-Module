@@ -30,11 +30,18 @@ I took part in this program under the **AWS Cloud Solution Architect** track.
 
 ---
 
+## 🖼️ UI Preview
+
+![Landing Page](docs/landing.png)
+
+---
+
 ## 🗂️ Project Structure
 
 ```
 📁 css/                  <-- Styling assets
 📁 img/                  <-- Icons and illustrations
+📁 docs/                 <-- Screenshots and design previews
 📄 index.html            <-- Landing page
 📄 Signup.html           <-- User registration
 📄 Verification.html     <-- Email verification mockup
