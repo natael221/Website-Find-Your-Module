@@ -32,7 +32,7 @@ I took part in this program under the **AWS Cloud Solution Architect** track.
 
 ## 🖼️ UI Preview
 
-![Landing Page](docs/landing.png)
+![Landing Page](Img/landing.png)
 
 ---
 
